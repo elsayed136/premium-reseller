@@ -1,0 +1,19 @@
+@use '../../styles/utils' as u;
+
+.dot {
+	width: 0.8rem;
+	height: 0.8rem;
+	background-color: #d1d3d4;
+	border: none;
+	border-radius: 50%;
+	cursor: pointer;
+
+	@include u.breakpoint-down(lg) {
+		width: 0.4rem;
+		height: 0.4rem;
+	}
+}
+
+.dot_fill {
+	background-color: #a7a9ac;
+}

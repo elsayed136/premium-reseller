@@ -17,7 +17,7 @@ function MainNavigation() {
 				</div>
 
 				<button className={classes.navbar__toggler} type='button'>
-					<Image src={MenuIcon} />
+					<Image src={MenuIcon} alt='menu icon' />
 				</button>
 
 				<nav className={classes.navbar}>
@@ -57,9 +57,15 @@ function MainNavigation() {
 					</ul>
 				</nav>
 				<div className={classes.header__icons}>
-					<Image src={SearchIcon} width={24} height={24} />
-					<Image src={ProfileIcon} width={24} height={24} />
-					<Image src={BagIcon} width={24} height={24} />
+					<div className={classes.icon}>
+						<Image src={SearchIcon} alt='Search icon' />
+					</div>
+					<div className={classes.icon}>
+						<Image src={ProfileIcon} alt='User profile icon' />
+					</div>
+					<div className={classes.icon}>
+						<Image src={BagIcon} alt='Cart icon' />
+					</div>
 				</div>
 			</Container>
 		</header>

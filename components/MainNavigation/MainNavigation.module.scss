@@ -77,5 +77,11 @@
 		@include u.breakpoint-down(xl) {
 			display: none;
 		}
+
+		.icon {
+			width: 2.4rem;
+			height: 2.4rem;
+			cursor: pointer;
+		}
 	}
 }

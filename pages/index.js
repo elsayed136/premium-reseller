@@ -1,9 +1,22 @@
-import Container from '../components/Container/Container';
+import ImageSlider from '../components/ImageSlider/ImageSlider';
 
-export default function HomePage() {
+export default function HomePage({ slides }) {
 	return (
-		<Container className='red'>
-			<h1>The Home Page</h1>
-		</Container>
+		<>
+			<ImageSlider slides={slides} />
+		</>
 	);
+}
+
+export async function getStaticProps() {
+	const response = await fetch(
+		`https://63189f2cf6b281877c71eab0.mockapi.io/slider`
+	);
+	const slides = await response.json();
+
+	return {
+		props: {
+			slides,
+		},
+	};
 }

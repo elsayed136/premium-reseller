@@ -1,0 +1,45 @@
+@use '../../styles/utils' as u;
+
+.slider {
+	.slide {
+		width: 100vw;
+		position: relative;
+		left: 50%;
+		right: 50%;
+		margin-left: -50vw;
+		margin-right: -50vw;
+	}
+
+	&__next,
+	&__prev {
+		position: absolute;
+		top: 50%;
+	}
+	&__next {
+		left: 0;
+		transform: translate(50%, -50%);
+	}
+	&__prev {
+		right: 0;
+		transform: translate(-50%, -50%);
+	}
+}
+
+.dots {
+	position: absolute;
+	left: 50%;
+	bottom: 2rem;
+	transform: translate(-50%, 0);
+
+	display: flex;
+	gap: 1.5rem;
+	padding: 0.8rem 1rem;
+	border-radius: 1.2rem;
+	background-color: white;
+
+	@include u.breakpoint-down(lg) {
+		gap: 0.7rem;
+		padding: 0.3rem 0.5rem;
+		bottom: 0.9rem;
+	}
+}

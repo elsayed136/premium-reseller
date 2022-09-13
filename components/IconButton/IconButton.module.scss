@@ -1,0 +1,21 @@
+@use '../../styles/utils' as u;
+
+.btn {
+	background-color: #fff;
+	border: none;
+	height: 3.8rem;
+	width: 3.8rem;
+	border-radius: 50%;
+	position: absolute;
+	cursor: pointer;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.hide_for_mobile {
+	@include u.breakpoint-down(lg) {
+		display: none !important;
+	}
+}
