@@ -1,0 +1,44 @@
+@use '../../styles/utils' as u;
+
+.products_preview {
+	padding: 5rem 0;
+	text-align: center;
+
+	@include u.breakpoint-down(lg) {
+		padding: 3rem 0;
+	}
+
+	.title {
+		font-size: u.$fz-lg;
+
+		@include u.breakpoint-down(lg) {
+			font-size: 1.8rem;
+		}
+	}
+
+	.preview {
+		padding: 3.6rem 0 3rem;
+		text-align: start;
+		@include u.breakpoint-down(lg) {
+			padding: 1.2rem 0 3rem;
+		}
+	}
+
+	.pagination {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 1.5rem;
+
+		.dots {
+			display: flex;
+			gap: 1.5rem;
+		}
+
+		@include u.breakpoint-down(lg) {
+			opacity: 0;
+			visibility: hidden;
+			pointer-events: none;
+		}
+	}
+}

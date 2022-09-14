@@ -1,12 +1,11 @@
 @use '../../styles/utils' as u;
 
 .btn {
-	background-color: #fff;
-	border: none;
-	height: 3.8rem;
-	width: 3.8rem;
+	background-color: u.$white;
+	border: 1px solid u.$grey;
+	height: 4rem;
+	width: 4rem;
 	border-radius: 50%;
-	position: absolute;
 	cursor: pointer;
 
 	display: flex;
