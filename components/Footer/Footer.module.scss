@@ -1,0 +1,58 @@
+@use '../../styles/utils' as u;
+
+.footer {
+	background-color: u.$dark;
+	color: u.$white;
+	padding: 5rem 0 2rem;
+
+	@include u.breakpoint-down(md) {
+		padding: 2rem 0 3rem;
+	}
+
+	.copyright {
+		font-size: u.$fz-sm;
+		text-align: center;
+
+		@include u.breakpoint-down(md) {
+			font-size: 1rem;
+		}
+	}
+
+	&__feats {
+		display: flex;
+		justify-content: space-around;
+		margin-bottom: 2.8rem;
+
+		@include u.breakpoint-down(md) {
+			margin-bottom: 2.3rem;
+			justify-content: space-between;
+		}
+	}
+
+	&__feat {
+		&:first-child {
+			width: 5.1rem;
+			@include u.breakpoint-down(md) {
+				width: 2.8rem;
+			}
+		}
+		&:nth-child(2) {
+			width: 6.4rem;
+			@include u.breakpoint-down(md) {
+				width: 3.5rem;
+			}
+		}
+		&:nth-child(3) {
+			width: 9.4rem;
+			@include u.breakpoint-down(md) {
+				width: 5.1rem;
+			}
+		}
+		&:last-child {
+			width: 9rem;
+			@include u.breakpoint-down(md) {
+				width: 4.9rem;
+			}
+		}
+	}
+}
