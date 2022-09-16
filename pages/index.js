@@ -1,4 +1,5 @@
 import ImageSlider from '../components/ImageSlider/ImageSlider';
+import NewsLetter from '../components/NewsLetter/NewsLetter';
 import ProductsPreview from '../components/ProductsPreview/ProductsPreview';
 
 export default function HomePage({ slides, products }) {
@@ -6,6 +7,7 @@ export default function HomePage({ slides, products }) {
 		<>
 			<ImageSlider slides={slides} />
 			<ProductsPreview products={products} />
+			<NewsLetter />
 		</>
 	);
 }

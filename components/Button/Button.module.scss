@@ -1,0 +1,17 @@
+@use '../../styles/utils' as u;
+
+.btn {
+	background-color: u.$black;
+	color: u.$white;
+	border: 1px solid u.$black;
+	padding: 1.6rem 6rem;
+	border-radius: 1rem;
+	font-size: inherit;
+	cursor: pointer;
+
+	@include u.breakpoint-down(md) {
+		font-size: 0.7rem;
+		padding: 0.8rem 3rem;
+		border-radius: 0.4rem;
+	}
+}

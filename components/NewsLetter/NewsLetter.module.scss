@@ -1,0 +1,46 @@
+@use '../../styles/utils' as u;
+
+.news_letter {
+	padding: 11.5rem 0;
+	background-color: u.$lightGrey;
+	text-align: center;
+
+	@include u.breakpoint-down(md) {
+		padding: 5.3rem 0 4.1rem;
+	}
+
+	.title {
+		font-size: u.$fz-xl;
+		margin-bottom: 3.6rem;
+
+		@include u.breakpoint-down(md) {
+			font-size: u.$fz-sm;
+			margin-bottom: 1.9rem;
+		}
+	}
+
+	input {
+		padding: 1.6rem 2.2rem;
+		background-color: transparent;
+		border: 1px solid #aaaaaa;
+		border-radius: 1rem;
+		font-size: inherit;
+		width: 42rem;
+
+		@include u.breakpoint-down(md) {
+			font-size: 0.7rem;
+			padding: 0.8rem 1.1rem;
+			border-radius: 0.4rem;
+			width: 20rem;
+		}
+	}
+	input::placeholder {
+		color: u.$black;
+		font-size: inherit;
+	}
+
+	.btn_left {
+		position: relative;
+		right: 2rem;
+	}
+}
