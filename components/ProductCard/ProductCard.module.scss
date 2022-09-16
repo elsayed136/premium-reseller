@@ -1,0 +1,65 @@
+@use '../../styles/utils' as u;
+
+.product {
+	outline: 1px solid u.$grey;
+	padding: 2.4rem 2.5rem 3.9rem;
+
+	@include u.breakpoint-down(md) {
+		padding: 1.3rem 1.4rem 2.2rem;
+	}
+
+	&__img {
+		position: relative;
+		padding: 0 2.5rem 3.3rem;
+
+		@include u.breakpoint-down(md) {
+			padding: 0 1rem 1.8rem;
+		}
+	}
+
+	&__title {
+		margin-bottom: 2rem;
+
+		@include u.breakpoint-down(md) {
+			font-size: 0.8rem;
+		}
+	}
+
+	&__price {
+		font-size: u.$fz-md;
+		letter-spacing: 0.7px;
+		margin-bottom: 0.5rem;
+		display: flex;
+		justify-content: space-between;
+
+		@include u.breakpoint-down(md) {
+			font-size: 1rem;
+			margin-bottom: 0.33rem;
+		}
+
+		&_old {
+			color: #a7a9ac;
+			text-decoration: line-through;
+		}
+	}
+
+	&__discount {
+		color: u.$redish;
+	}
+
+	.available {
+		font-size: u.$fz-sm;
+
+		@include u.breakpoint-down(md) {
+			font-size: 0.6rem;
+		}
+	}
+
+	.in_stoke {
+		color: u.$lightGreen;
+	}
+
+	.out_stoke {
+		color: u.$redish;
+	}
+}
