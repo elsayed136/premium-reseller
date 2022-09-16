@@ -6,7 +6,7 @@ export default function HomePage({ slides, products }) {
 	return (
 		<>
 			<ImageSlider slides={slides} />
-			<ProductsPreview products={products} />
+			<ProductsPreview products={products} title='Explore Products' />
 			<NewsLetter />
 		</>
 	);

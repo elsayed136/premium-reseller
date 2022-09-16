@@ -1,9 +1,15 @@
 import Image from 'next/image';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 import classes from './ProductCard.module.scss';
 
 const ProductCard = ({ product }) => {
+	const router = useRouter();
+
+	const clickHandler = () => router.push(product.id);
+
 	return (
-		<div className={classes.product}>
+		<div className={classes.product} onClick={clickHandler}>
 			<div className={classes.product__img}>
 				<Image
 					src={product.img[0]}

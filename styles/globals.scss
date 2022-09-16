@@ -9,12 +9,14 @@ html {
 	font-size: 62.5%; // 10px
 	box-sizing: border-box;
 	overflow-x: hidden;
+	min-height: 100vh;
 }
 
 body {
 	font-family: 'SF Pro Display', serif;
 	font-size: u.$fz;
 	overflow-x: hidden;
+	min-height: inherit;
 }
 
 *,
@@ -23,6 +25,16 @@ body {
 	margin: 0;
 	padding: 0;
 	box-sizing: inherit;
+}
+
+#__next {
+	display: flex;
+	flex-direction: column;
+	min-height: inherit;
+}
+
+main {
+	flex: 1;
 }
 
 a:link,
