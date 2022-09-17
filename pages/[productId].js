@@ -8,7 +8,11 @@ const ProductPage = ({ products, product }) => {
 		<div>
 			<Container>
 				<ProductDetails product={product} />
-				<ProductsPreview products={products} />
+				<ProductsPreview
+					products={products}
+					title='Explore Products'
+					hideForDesktop
+				/>
 			</Container>
 		</div>
 	);

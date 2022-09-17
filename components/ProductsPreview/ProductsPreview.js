@@ -6,11 +6,19 @@ import IconButton from '../IconButton/IconButton';
 import ProductCard from '../ProductCard/ProductCard';
 import classes from './ProductsPreview.module.scss';
 
-const ProductsPreview = ({ products, title }) => {
+const ProductsPreview = ({ products, title, hideForDesktop }) => {
 	return (
 		<div className={classes.products_preview}>
 			<Container>
-				{title && <h1 className={classes.title}>{title}</h1>}
+				{title && (
+					<h1
+						className={`${classes.title} ${
+							hideForDesktop && classes.hide_for_desktop
+						}`}
+					>
+						{title}
+					</h1>
+				)}
 				<div className={classes.preview}>
 					{products
 						.filter((_, i) => i < 4)
