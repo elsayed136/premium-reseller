@@ -14,7 +14,7 @@
 }
 
 .hide_for_mobile {
-	@include u.breakpoint-down(lg) {
+	@include u.breakpoint-down(md) {
 		display: none !important;
 	}
 }
