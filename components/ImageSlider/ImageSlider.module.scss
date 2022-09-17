@@ -8,6 +8,14 @@
 		right: 50%;
 		margin-left: -50vw;
 		margin-right: -50vw;
+		opacity: 0;
+		transform: scale(0.95);
+		transition: all 1s ease;
+	}
+
+	.slide.active {
+		opacity: 1;
+		transform: scale(1);
 	}
 
 	&__next,

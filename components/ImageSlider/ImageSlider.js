@@ -24,17 +24,27 @@ const ImageSlider = ({ slides }) => {
 	return (
 		<div className={classes.slider}>
 			<Container style={{ position: 'relative' }}>
-				<div className={classes.slide}>
-					<Image
-						src={slides[currentSlide].img}
-						width={1920}
-						height={494}
-						layout='responsive'
-						priority={true}
-						as='image'
-						alt='Iphone mobile phone'
-					/>
-				</div>
+				{slides.map((slide, index) => {
+					return (
+						<div
+							className={`${classes.slide} ${
+								index === currentSlide ? classes.active : ''
+							}`}
+						>
+							{index === currentSlide && (
+								<Image
+									src={slides[currentSlide].img}
+									width={1920}
+									height={494}
+									layout='responsive'
+									priority={true}
+									as='image'
+									alt='Iphone mobile phone'
+								/>
+							)}
+						</div>
+					);
+				})}
 				<IconButton
 					icon={ArrowLeft}
 					className={classes.slider__next}
