@@ -39,9 +39,7 @@ const ProductDetails = ({ product }) => {
 					<Image src={HeartIcon} width={24} height={24} alt='Favorite Icon' />
 				</div>
 				<span className={classes.brand}>apple</span>
-				<h2 className={classes.title}>
-					Apple - iPhone 13 Pro 5G 128GB - Sierra Blue (Verizon)
-				</h2>
+				<h2 className={classes.title}>{name}</h2>
 				<Rating
 					numberOfStars={numberOfStars}
 					numberOfReviews={numberOfReviews}
