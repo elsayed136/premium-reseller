@@ -1,0 +1,43 @@
+@use '../../styles/utils' as u;
+
+.card_input {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	color: #c3c3c3;
+
+	height: 8.2rem;
+	padding: 1.3rem;
+
+	@include u.breakpoint-down(sm) {
+		padding: 0.9rem;
+	}
+
+	&_radio {
+		-webkit-appearance: none;
+		appearance: none;
+		border: 1px solid #c3c3c3;
+		border-radius: 1rem;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		cursor: pointer;
+		z-index: 9999;
+
+		&:checked {
+			border-color: black;
+		}
+
+		&:checked ~ * {
+			color: black;
+		}
+	}
+
+	&_lable {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+}

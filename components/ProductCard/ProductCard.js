@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import Link from 'next/link';
 import { useRouter } from 'next/router';
 import classes from './ProductCard.module.scss';
 
@@ -22,7 +21,7 @@ const ProductCard = ({ product }) => {
 			<p className={classes.product__price}>
 				{product.price !== product.priceAfterdiscount && (
 					<strong className={classes.product__discount}>
-						${product.price.toFixed(2)}
+						${product.priceAfterdiscount.toFixed(2)}
 					</strong>
 				)}
 

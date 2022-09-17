@@ -5,7 +5,7 @@
 	padding: 2.4rem 2.5rem 3.9rem;
 	cursor: pointer;
 
-	@include u.breakpoint-down(md) {
+	@include u.breakpoint-down(sm) {
 		padding: 1.3rem 1.4rem 2.2rem;
 	}
 
@@ -13,7 +13,7 @@
 		position: relative;
 		padding: 0 2.5rem 3.3rem;
 
-		@include u.breakpoint-down(md) {
+		@include u.breakpoint-down(sm) {
 			padding: 0 1rem 1.8rem;
 		}
 	}
@@ -21,7 +21,7 @@
 	&__title {
 		margin-bottom: 2rem;
 
-		@include u.breakpoint-down(md) {
+		@include u.breakpoint-down(sm) {
 			font-size: 0.8rem;
 		}
 	}
@@ -33,7 +33,7 @@
 		display: flex;
 		justify-content: space-between;
 
-		@include u.breakpoint-down(md) {
+		@include u.breakpoint-down(sm) {
 			font-size: 1rem;
 			margin-bottom: 0.33rem;
 		}
@@ -51,7 +51,7 @@
 	.available {
 		font-size: u.$fz-sm;
 
-		@include u.breakpoint-down(md) {
+		@include u.breakpoint-down(sm) {
 			font-size: 0.6rem;
 		}
 	}

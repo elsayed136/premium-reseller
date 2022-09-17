@@ -1,0 +1,41 @@
+@use '../../styles/utils' as u;
+
+.title {
+	font-size: 1.6rem;
+	font-weight: 600;
+	margin-bottom: 0.4rem;
+
+	@include u.breakpoint-down(sm) {
+		font-size: 1rem;
+	}
+}
+
+.price {
+	font-size: 1.8rem;
+
+	@include u.breakpoint-down(sm) {
+		font-size: 1.2rem;
+	}
+}
+
+.color_name {
+	font-size: 1.2rem;
+	font-weight: 600;
+	margin-bottom: 0.8rem;
+
+	@include u.breakpoint-down(sm) {
+		font-size: 0.7rem;
+		margin-bottom: 0.7rem;
+	}
+}
+.color_value {
+	width: 3.6rem;
+	height: 3.6rem;
+	border: 1px solid #707070;
+	border-radius: 50%;
+
+	@include u.breakpoint-down(sm) {
+		width: 2.6rem;
+		height: 2.6rem;
+	}
+}
