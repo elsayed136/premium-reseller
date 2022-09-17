@@ -2,7 +2,10 @@
 
 @font-face {
 	font-family: 'SF Pro Display';
+	font-style: normal;
+	font-weight: 400;
 	src: url(../assets/fonts/SFPRODISPLAYREGULAR.OTF) format('opentype');
+	font-display: swap;
 }
 
 html {
