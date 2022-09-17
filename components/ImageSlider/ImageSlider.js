@@ -27,13 +27,14 @@ const ImageSlider = ({ slides }) => {
 				{slides.map((slide, index) => {
 					return (
 						<div
+							key={slide.id}
 							className={`${classes.slide} ${
 								index === currentSlide ? classes.active : ''
 							}`}
 						>
 							{index === currentSlide && (
 								<Image
-									src={slides[currentSlide].img}
+									src={slide.img}
 									width={1920}
 									height={494}
 									layout='responsive'
