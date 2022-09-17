@@ -9,6 +9,7 @@ function Layout(props) {
 			<Head>
 				<title>Premium Resller</title>
 				<meta name='viewport' content='initial-scale=1.0, width=device-width' />
+				<meta name='description' content='Bit68 FrontEnd Task'></meta>
 			</Head>
 			<MainNavigation />
 			<main>{props.children}</main>

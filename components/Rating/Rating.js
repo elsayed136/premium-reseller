@@ -9,9 +9,14 @@ const Rating = ({ numberOfStars, numberOfReviews }) => {
 			<div className={classes.stars}>
 				{Array.from({ length: 5 }, (v, i) => i).map(v =>
 					v < numberOfStars ? (
-						<Image src={Star} width={17} height={16} />
+						<Image src={Star} width={17} height={16} alt='rating star' />
 					) : (
-						<Image src={StarEmpty} width={17} height={16} />
+						<Image
+							src={StarEmpty}
+							width={17}
+							height={16}
+							alt='empty rating star'
+						/>
 					)
 				)}
 			</div>

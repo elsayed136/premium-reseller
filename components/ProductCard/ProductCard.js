@@ -15,6 +15,7 @@ const ProductCard = ({ product }) => {
 					width={220}
 					height={220}
 					layout='responsive'
+					alt={product.name}
 				/>
 			</div>
 			<p className={classes.product__title}>{product.name}</p>

@@ -11,6 +11,7 @@ import classes from './ProductDetails.module.scss';
 
 const ProductDetails = ({ product }) => {
 	const {
+		name,
 		img,
 		price,
 		priceAfterdiscount,
@@ -22,20 +23,20 @@ const ProductDetails = ({ product }) => {
 	const isInStock = inStock ? `${classes.active}` : '';
 
 	const imgs = img.map((url, index) => (
-		<Image key={index} src={url} width={80} height={80} />
+		<Image key={index} src={url} width={80} height={80} alt={name} />
 	));
 	return (
 		<div className={classes.product_details}>
 			<div className={classes.imgs_container}>
 				<div className={classes.product_imgs}>{imgs}</div>
 				<div className={classes.product_img}>
-					<Image src={img[0]} width={531} height={531} />
+					<Image src={img[0]} width={531} height={531} alt={name} />
 				</div>
 			</div>
 
 			<div className={`${classes.details} ${isInStock}`}>
 				<div className={classes.heart}>
-					<Image src={HeartIcon} width={24} height={24} />
+					<Image src={HeartIcon} width={24} height={24} alt='Favorite Icon' />
 				</div>
 				<span className={classes.brand}>apple</span>
 				<h2 className={classes.title}>
@@ -82,16 +83,36 @@ const ProductDetails = ({ product }) => {
 					</div>
 					<div className={classes.card_input_row}>
 						<CardInput name='bank'>
-							<Image src={CIB_Logo} width={88} height={42} />
+							<Image
+								src={CIB_Logo}
+								width={88}
+								height={42}
+								alt='CIB Bank Logo'
+							/>
 						</CardInput>
 						<CardInput name='bank'>
-							<Image src={CIB_Logo} width={88} height={42} />
+							<Image
+								src={CIB_Logo}
+								width={88}
+								height={42}
+								alt='CIB Bank Logo'
+							/>
 						</CardInput>
 						<CardInput name='bank'>
-							<Image src={CIB_Logo} width={88} height={42} />
+							<Image
+								src={CIB_Logo}
+								width={88}
+								height={42}
+								alt='CIB Bank Logo'
+							/>
 						</CardInput>
 						<CardInput name='bank'>
-							<Image src={CIB_Logo} width={88} height={42} />
+							<Image
+								src={CIB_Logo}
+								width={88}
+								height={42}
+								alt='CIB Bank Logo'
+							/>
 						</CardInput>
 					</div>
 
@@ -134,11 +155,16 @@ const ProductDetails = ({ product }) => {
 
 				<div className={classes.shipping}>
 					<div className={classes.shipping_feat}>
-						<Image src={ShippingIcon} width={20} height={20} />
+						<Image
+							src={ShippingIcon}
+							width={20}
+							height={20}
+							alt='Shipping Icon'
+						/>
 						Free shipping, arrives by Tue, Nov 23
 					</div>
 					<div className={classes.shipping_feat}>
-						<Image src={ReturnIcon} width={20} height={20} />
+						<Image src={ReturnIcon} width={20} height={20} alt='return Icon' />
 						Free 10-day return window starts Dec 26th Details
 					</div>
 				</div>
